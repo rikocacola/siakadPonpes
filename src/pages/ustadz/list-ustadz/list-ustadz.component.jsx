@@ -1,5 +1,6 @@
 import React from 'react';
 import {format, parseISO} from 'date-fns';
+import {Link} from 'react-router-dom';
 
 import { Button, Table } from 'react-bootstrap';
 
@@ -92,8 +93,8 @@ class ListUstadz extends React.Component{
                         <td>{ustad.pendidikanUstadz}</td>
                         <td>{format(parseISO(ustad.tanggalLahirUstadz), 'dd MMM yyyy')}</td>
                         <td>
-                            <Button variant='info' onClick={() => this.props.editUstadz(ustad.idUstadz)}>
-                                Edit
+                            <Button variant='info'>
+                                <Link to={`/ustadz/edit/${ustad.niyUstadz}`}>Edit</Link>
                             </Button>
                             <Button variant='danger' onClick={() => this.deleteUstadz(ustad.niyUstadz)}>
                                 Delete

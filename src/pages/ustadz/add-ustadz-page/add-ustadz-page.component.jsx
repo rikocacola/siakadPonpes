@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import {format, parseISO} from 'date-fns';
-// import moment from 'moment';
 
 import { Row , Form, Col, Button, Modal, Alert, Container } from 'react-bootstrap';
 import Select from 'react-select';
